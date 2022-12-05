@@ -1,0 +1,5 @@
+# ninja log v5
+0	7425	1620185311243439302	/data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance_cuda.o	505da573b6206dbd
+0	16610	1620185320419439466	/data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance.o	c624a1b517b5eb64
+2	9505	1620189459187513473	/data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance_cuda.o	d3a9f3306e6712cc
+1	17972	1620189467647513624	/data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance.o	2058b6a35ca80797

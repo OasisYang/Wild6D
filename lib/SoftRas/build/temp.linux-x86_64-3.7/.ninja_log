@@ -1,0 +1,17 @@
+# ninja log v5
+0	8432	1620187114387471545	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/load_textures_cuda_kernel.o	83da40579e529a18
+0	18004	1620187123947471716	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/load_textures_cuda.o	a35d4ebc5e3ad58c
+1	8526	1620187508619478594	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/create_texture_image_cuda_kernel.o	6ef35fca151c50fa
+0	18331	1620187518415478769	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/create_texture_image_cuda.o	ad6b9e80db90eec6
+0	9729	1620187528643478952	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/soft_rasterize_cuda_kernel.o	4ea25f65738d14f2
+0	19234	1620187538139479122	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/soft_rasterize_cuda.o	414117419d10e46
+1	8674	1620187569051479675	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/voxelization_cuda_kernel.o	e0db5a0e1751efa3
+1	19627	1620187579991479870	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/voxelization_cuda.o	390dcfa930dd5976
+3	9517	1620189124203507483	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/load_textures_cuda_kernel.o	88d20906f5db53f
+2	17965	1620189132643507634	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/load_textures_cuda.o	4925e2d9cdd82b02
+2	9803	1620189143075507821	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/create_texture_image_cuda_kernel.o	519d35d43f9907a2
+1	23028	1620189156291508057	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/create_texture_image_cuda.o	dd9db41d5be2208b
+2	11092	1620189167967508266	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/soft_rasterize_cuda_kernel.o	254dbfffe96fae94
+1	23771	1620189180639508492	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/soft_rasterize_cuda.o	64ba1ea1baf856ed
+2	9867	1620189191083508679	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/voxelization_cuda_kernel.o	14096f58507f44a4
+2	20255	1620189201459508865	/data/yangfu2/project/object_pose/lib/SoftRas/build/temp.linux-x86_64-3.7/soft_renderer/cuda/voxelization_cuda.o	3133e123a9ed8f06

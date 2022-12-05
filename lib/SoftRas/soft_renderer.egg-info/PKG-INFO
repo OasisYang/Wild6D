@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: soft-renderer
+Version: 1.0.0
+Summary: PyTorch implementation of "Soft Rasterizer"
+Home-page: UNKNOWN
+Author: Shichen Liu
+Author-email: liushichen95@gmail.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,29 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda-11.2/bin/nvcc
+
+cflags = -pthread -B /data/yangfu2/miniconda3/envs/DoF/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/torch/csrc/api/include -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/TH -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/THC -I/usr/local/cuda-11.2/include -I/data/yangfu2/miniconda3/envs/DoF/include/python3.7m -c
+post_cflags = -g -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=nn_distance -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++14
+cuda_cflags = -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/torch/csrc/api/include -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/TH -I/data/yangfu2/miniconda3/envs/DoF/lib/python3.7/site-packages/torch/include/THC -I/usr/local/cuda-11.2/include -I/data/yangfu2/miniconda3/envs/DoF/include/python3.7m -c
+cuda_post_cflags = -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -O2 -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=nn_distance -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_86,code=compute_86 -gencode=arch=compute_86,code=sm_86 -std=c++14
+ldflags = 
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc --generate-dependencies-with-compile --dependency-output $out.d $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+
+
+build /data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance.o: compile /data/yangfu2/project/object_pose/lib/nn_distance/src/nn_distance.cpp
+build /data/yangfu2/project/object_pose/lib/nn_distance/build/temp.linux-x86_64-3.7/src/nn_distance_cuda.o: cuda_compile /data/yangfu2/project/object_pose/lib/nn_distance/src/nn_distance_cuda.cu
+
+
+
+
+

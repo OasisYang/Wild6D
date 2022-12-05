@@ -120,7 +120,7 @@ def detect():
             x1, x2 = horizontal_indicies[[0, -1]]
             y1, y2 = vertical_indicies[[0, -1]]
             bbox = np.array([x1, y1, x2-x1, y2-y1]).astype(np.int)
-            c, s = xywh_to_cs(bbox, 1.5, s_max=max(480, 640))
+            c, s = xywh_to_cs(bbox, 1.2, s_max=max(480, 640))
             rgb, c_h_, c_w_, s_, crop_bbox = zoom_in(raw_rgb, c, s, opt.img_size)
             rmin, rmax, cmin, cmax = crop_bbox[0], crop_bbox[1], crop_bbox[2], crop_bbox[3]
             box_c = np.array([c_w_, c_h_])

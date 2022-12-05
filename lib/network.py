@@ -263,7 +263,7 @@ class PoseNetV3(nn.Module):
         num_obj = 6 if opts.select_class == 'all' else 1
         self.num_obj = num_obj
         self.encoder = PSPNet(bins=(1, 2, 3, 6), backend='resnet18')
-        self.deform_head = DeformNetV4(n_cat=num_obj, imp=opts.implict)
+        self.deform_head = DeformNetV4(n_cat=num_obj, imp=opts.implicit)
         self.pose_head = PoseHeadNetV2(opts.n_pts, num_obj, in_dim=1792, 
                 with_nocs=opts.use_nocs_map)
 

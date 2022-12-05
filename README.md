@@ -37,8 +37,25 @@ We also provide a script that allows downloading all dataset files at once. In o
   bash tools/download.sh
   ```
 
-
-
+Unzip and organize these files in ``$ROOT/data``  as the following structure:
+```
+data
+├── Wild6D
+│   ├── bottle
+│   ├── bowl
+│   ├── camera
+│   ├── laptop
+│   ├── mug
+│   └── test_set
+│       ├──pkl_annotations
+│       │   ├── bottle
+│       │   ├── bowl
+│       │       ...
+│       ├── bottle
+│       ├── bowl
+│           ...
+├── meshes
+```
 
 ## Evaluation
 - Download the pretrained model for different categories from [Google Drive](https://drive.google.com/drive/folders/1Xt-b6FF9iOOyIBuygh-SGkEiTSkF41hx) to `$MODEL_PATH`

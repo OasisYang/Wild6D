@@ -5,4 +5,6 @@ results
 evaluate_pose.py
 evaluate.py
 train_pose.py
-*.sh
+# *.sh
+eval.sh
+eval_wild6d.sh

@@ -26,7 +26,17 @@ NeurIPS 2022
 - Install PyTorch>=1.8.1 [here](https://pytorch.org/get-started/locally/) based the package management tool you used and your cuda version (older PyTorch versions may work but have not been tested)
 - `pip install -r requirements.txt`
 ### Data
-Download and unzip Wild6D data from [this link](https://drive.google.com/drive/folders/1SjWUcuSvYMM5rPPd4aQhK0jo1IHbCJbT) (Testing set is only needed for evaluation).
+Download and unzip Wild6D data from [this link](https://drive.google.com/drive/folders/1SjWUcuSvYMM5rPPd4aQhK0jo1IHbCJbT) (Testing set is only needed for evaluation). 
+We highly recommend you to download Wild6D data via [gdown](https://github.com/wkentaro/gdown). For example, you can download the testing data with the following command.
+    
+  ```
+  gdown --id 1AWLX6V0kAyiTFdkGg4FrkEaQ5jbUVtaj
+  ```
+We also provide a script that allows downloading all dataset files at once. In order to do so, execute the download script, 
+  ```
+  bash tools/download.sh
+  ```
+
 
 
 

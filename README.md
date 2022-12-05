@@ -59,7 +59,7 @@ data
 
 ## Evaluation
 - Download the pretrained model for different categories from [Google Drive](https://drive.google.com/drive/folders/1Xt-b6FF9iOOyIBuygh-SGkEiTSkF41hx) to `$MODEL_PATH`
-- Pick a category name `$CATEGORY_NAME` which you can find definition in [evaluate_pose_ucsd.py](evaluate_wild6d.py). Using the following code to evaluate the pretrained model.
+- Pick a category name `$CATEGORY_NAME` which you can find definition in [evaluate_wild6d.py](evaluate_wild6d.py). Using the following code to evaluate the pretrained model.
 
     ```
     python evaluate_wild6d.py --use_nocs_map --implicit --model $MODEL_PATH --select_class $CATEGORY_NAME

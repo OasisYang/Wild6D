@@ -59,10 +59,10 @@ data
 
 ## Evaluation
 - Download the pretrained model for different categories from [Google Drive](https://drive.google.com/drive/folders/1Xt-b6FF9iOOyIBuygh-SGkEiTSkF41hx) to `$MODEL_PATH`
-- Pick a category name `$CATEGORY_NAME` which you can find definition in [evaluate_pose_ucsd.py](evaluate_pose_ucsd.py). Using the following code to evaluate the pretrained model.
+- Pick a category name `$CATEGORY_NAME` which you can find definition in [evaluate_pose_ucsd.py](evaluate_wild6d.py). Using the following code to evaluate the pretrained model.
 
     ```
-    python evaluate_pose_ucsd.py --use_nocs_map --implicit --model $MODEL_PATH --select_class $CATEGORY_NAME
+    python evaluate_wild6d.py --use_nocs_map --implicit --model $MODEL_PATH --select_class $CATEGORY_NAME
     ```
 - Note that the results may be slightly different from the number reported in paper, since we further clean the dataset recently. We also provide the [estimation results](https://drive.google.com/file/d/1SRAMxBLi44y31AxFEl0Lgm86WmFPoGEF) that align with the paper number as the reference.
 
